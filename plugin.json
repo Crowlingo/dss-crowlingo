@@ -1,0 +1,15 @@
+{
+    "id": "crowlingo-nlp",
+    "version": "0.1.0",
+    "meta": {
+        "label": "Crowlingo Services NLP",
+        "category": "Natural Language Processing",
+        "description": "Use Crowlingo APIs for  Natural Language to perform multilingual analysis like Named Entity Recognition, Classification or Summarization",
+        "author": "Crowlingo (Jonas Bouaziz and Jeremie Zimmer)",
+        "tags": [
+            "Crowlingo",
+            "Multilingual",
+            "NLP"
+        ],
+    }
+}
