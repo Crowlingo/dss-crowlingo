@@ -1,0 +1,39 @@
+{
+    "meta": {
+        "label": "API configuration",
+        "description": "Define presets for users to call the API with specific credentials, quota and parallelization parameters",
+        "icon": "icon-gcp-natural-language-api icon-cloud"
+    },
+    "defaultDefinableAtProjectLevel": true,
+    "defaultDefinableInline": false,
+    "definableInline": false,
+    "params": [
+        {
+            "name": "separator_authentification",
+            "label": "Authentification",
+            "type": "SEPARATOR",
+            "description": "Please refer to the Crowlingo documentation: https://crowlingo.com/docs/"
+        },
+        {
+            "name": "crowlingo-api-token",
+            "label": "Crowlingo API Token",
+            "description": "Token used to query Crowlingo Services.",
+            "type": "STRING",
+            "mandatory": false
+        },
+        {
+            "name": "crowlingo-username",
+            "label": "Crowlingo username",
+            "description": "Username of Crowlingo account, not necessary if API token is not empty.",
+            "type": "STRING",
+            "mandatory": false
+        },
+        {
+            "name": "crowlingo-password",
+            "label": "Crowlingo password",
+            "description": "Password of Crowlingo account, not necessary if API token is not empty.",
+            "type": "STRING",
+            "mandatory": false
+        }
+    ]
+}
