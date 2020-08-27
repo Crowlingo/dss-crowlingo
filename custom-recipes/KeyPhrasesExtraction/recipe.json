@@ -1,0 +1,92 @@
+{
+    "meta": {
+        "label": "Key Phrases Extraction",
+        "displayOrderRank": 2,
+        "description": "Extract the key phrases of your text"
+    },
+    "kind": "PYTHON",
+    "selectableFromDataset": "input_dataset",
+    "inputRoles": [
+        {
+            "name": "input_dataset",
+            "label": "Input Dataset",
+            "description": "Dataset containing the text data to analyze",
+            "arity": "UNARY",
+            "required": true,
+            "acceptsDataset": true
+        }
+    ],
+    "outputRoles": [
+        {
+            "name": "output_dataset",
+            "label": "Output dataset",
+            "description": "Dataset with enriched output",
+            "arity": "UNARY",
+            "required": true,
+            "acceptsDataset": true
+        }
+    ],
+    "params": [
+        {
+            "name": "separator_input",
+            "label": "Input Parameters",
+            "type": "SEPARATOR"
+        },
+        {
+            "name": "text_column",
+            "label": "Text column",
+            "type": "COLUMN",
+            "columnRole": "input_dataset",
+            "mandatory": true,
+            "allowedColumnTypes": [
+                "string"
+            ]
+        },
+        {
+            "name": "lang_column",
+            "label": "Language Column",
+            "type": "COLUMN",
+            "columnRole": "input_dataset",
+            "mandatory": false,
+            "allowedColumnTypes": [
+                "string"
+            ]
+        },
+        {
+            "name": "normalize",
+            "label": "Normalize",
+            "type": "BOOLEAN",
+            "mandatory": false
+        },
+        {
+            "name": "limit",
+            "label": "Limit",
+            "type": "INT",
+            "mandatory": false
+        },
+        {
+            "name": "result_prefix",
+            "label": "Result Prefix",
+            "type": "STRING",
+            "defaultValue": "",
+            "mandatory": false
+        },
+        {
+            "name": "separator_configuration",
+            "label": "Configuration",
+            "type": "SEPARATOR"
+        },
+        {
+            "name": "api_configuration_preset",
+            "label": "API configuration preset",
+            "type": "PRESET",
+            "parameterSetId": "api-configuration",
+            "mandatory": true
+        },
+        {
+            "name": "separator_advanced",
+            "label": "Advanced",
+            "type": "SEPARATOR"
+        }
+    ]
+}

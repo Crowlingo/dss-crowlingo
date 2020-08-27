@@ -1,0 +1,101 @@
+{
+    "meta": {
+        "label": "Phrase Matcher",
+        "displayOrderRank": 2,
+        "description": "Match a word or expression in your without worrying about translations or variations"
+    },
+    "kind": "PYTHON",
+    "selectableFromDataset": "input_dataset",
+    "inputRoles": [
+        {
+            "name": "input_dataset",
+            "label": "Input Dataset",
+            "description": "Dataset containing the text data to analyze",
+            "arity": "UNARY",
+            "required": true,
+            "acceptsDataset": true
+        }
+    ],
+    "outputRoles": [
+        {
+            "name": "output_dataset",
+            "label": "Output dataset",
+            "description": "Dataset with enriched output",
+            "arity": "UNARY",
+            "required": true,
+            "acceptsDataset": true
+        }
+    ],
+    "params": [
+        {
+            "name": "separator_input",
+            "label": "Input Parameters",
+            "type": "SEPARATOR"
+        },
+        {
+            "name": "text_column",
+            "label": "Text column",
+            "type": "COLUMN",
+            "columnRole": "input_dataset",
+            "mandatory": true,
+            "allowedColumnTypes": [
+                "string"
+            ]
+        },
+        {
+            "name": "lang_column",
+            "label": "Language Column",
+            "type": "COLUMN",
+            "columnRole": "input_dataset",
+            "mandatory": false
+        },
+        {
+            "name": "phrase",
+            "label": "Phrase",
+            "type": "STRING",
+            "mandatory": true
+        },
+        {
+            "name": "phrase_lang",
+            "label": "Phrase Language",
+            "type": "STRING",
+            "mandatory": false
+        },
+        {
+            "name": "visualize",
+            "label": "Visualize",
+            "type": "BOOLEAN",
+            "mandatory": false
+        },
+        {
+            "name": "precision",
+            "label": "Precision",
+            "type": "DOUBLE",
+            "mandatory": false
+        },
+        {
+            "name": "result_prefix",
+            "label": "Result Prefix",
+            "type": "STRING",
+            "defaultValue": "",
+            "mandatory": false
+        },
+        {
+            "name": "separator_configuration",
+            "label": "Configuration",
+            "type": "SEPARATOR"
+        },
+        {
+            "name": "api_configuration_preset",
+            "label": "API configuration preset",
+            "type": "PRESET",
+            "parameterSetId": "api-configuration",
+            "mandatory": true
+        },
+        {
+            "name": "separator_advanced",
+            "label": "Advanced",
+            "type": "SEPARATOR"
+        }
+    ]
+}

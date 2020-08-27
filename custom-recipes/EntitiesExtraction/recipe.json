@@ -1,8 +1,8 @@
 {
     "meta": {
-        "label": "Named Entity Recognition",
+        "label": "Entities Extraction",
         "displayOrderRank": 2,
-        "description": "Extract 18 differents types of entities in a text"
+        "description": "Extract 18 different types of entities in a text"
     },
     "kind": "PYTHON",
     "selectableFromDataset": "input_dataset",
@@ -47,6 +47,22 @@
             "label": "Language Column",
             "type": "COLUMN",
             "columnRole": "input_dataset",
+            "mandatory": false,
+            "allowedColumnTypes": [
+                "string"
+            ]
+        },
+        {
+            "name": "visualize",
+            "label": "Visualize",
+            "type": "BOOLEAN",
+            "mandatory": false
+        },
+        {
+            "name": "result_prefix",
+            "label": "Result Prefix",
+            "type": "STRING",
+            "defaultValue": "",
             "mandatory": false
         },
         {
