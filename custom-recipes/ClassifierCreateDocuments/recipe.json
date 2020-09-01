@@ -1,8 +1,8 @@
 {
     "meta": {
-        "label": "Entities Extraction",
+        "label": "Classifier - Create documents",
         "displayOrderRank": 2,
-        "description": "Extract 18 different types of entities in a text"
+        "description": "Upload the training data of your classification model"
     },
     "kind": "PYTHON",
     "selectableFromDataset": "input_dataset",
@@ -53,9 +53,40 @@
             ]
         },
         {
-            "name": "visualize",
-            "label": "Visualize",
-            "type": "BOOLEAN",
+            "name": "class_id_column",
+            "label": "Class ID Column",
+            "type": "COLUMN",
+            "columnRole": "input_dataset",
+            "mandatory": false,
+            "allowedColumnTypes": [
+                "string"
+            ]
+        },
+        {
+            "name": "id_column",
+            "label": "Document ID Column",
+            "type": "COLUMN",
+            "columnRole": "input_dataset",
+            "mandatory": false,
+            "allowedColumnTypes": [
+                "string"
+            ]
+        },
+        {
+            "name": "separator_input",
+            "label": "Model Parameters",
+            "type": "SEPARATOR"
+        },
+        {
+            "name": "model_id",
+            "label": "Model ID",
+            "type": "STRING",
+            "mandatory": true
+        },
+        {
+            "name": "model_owner",
+            "label": "Model Owner",
+            "type": "STRING",
             "mandatory": false
         },
         {

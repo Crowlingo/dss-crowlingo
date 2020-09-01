@@ -34,7 +34,7 @@
         },
         {
             "name": "text_column",
-            "label": "Text column",
+            "label": "Text column *",
             "type": "COLUMN",
             "columnRole": "input_dataset",
             "mandatory": true,
@@ -43,23 +43,23 @@
             ]
         },
         {
-            "name": "result_prefix",
-            "label": "Result Prefix",
-            "type": "STRING",
-            "defaultValue": "",
-            "mandatory": false
-        },
-        {
-            "name": "separator_configuration",
-            "label": "Configuration",
-            "type": "SEPARATOR"
-        },
-        {
             "name": "api_configuration_preset",
             "label": "API configuration preset",
             "type": "PRESET",
             "parameterSetId": "api-configuration",
             "mandatory": true
+        },
+        {
+            "name": "separator_configuration",
+            "label": "Advanced",
+            "type": "SEPARATOR"
+        },
+        {
+            "name": "result_prefix",
+            "label": "Result Prefix",
+            "type": "STRING",
+            "defaultValue": "",
+            "mandatory": false
         }
     ]
 }

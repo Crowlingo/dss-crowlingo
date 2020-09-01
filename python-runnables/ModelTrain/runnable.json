@@ -1,0 +1,128 @@
+{
+    "meta": {
+        "label": "Model - Train",
+       "description": "",
+       "icon": "icon-puzzle-piece"
+    },
+   "impersonate": false,
+    "params": [
+        {
+            "name": "separator_input",
+            "label": "Input Parameters",
+            "type": "SEPARATOR"
+        },
+        {
+            "name": "model_type",
+            "label": "Model Type",
+            "type": "STRING",
+            "mandatory": false
+        },
+        {
+            "name": "train_ratio",
+            "label": "Train Ratio",
+            "type": "DOUBLE",
+            "mandatory": false
+        },
+        {
+            "name": "separator_input",
+            "label": "Model Parameters",
+            "type": "SEPARATOR"
+        },
+        {
+            "name": "model_id",
+            "label": "Model ID *",
+            "type": "STRING",
+            "mandatory": true
+        },
+        {
+            "name": "model_owner",
+            "label": "Model Owner",
+            "type": "STRING",
+            "mandatory": false
+        },
+        {
+            "name": "separator_input",
+            "label": "Configuration",
+            "type": "SEPARATOR"
+        },
+        {
+            "name": "api_configuration_preset",
+            "label": "API configuration preset *",
+            "type": "PRESET",
+            "parameterSetId": "api-configuration",
+            "mandatory": true
+        },
+        {
+            "name": "separator_input",
+            "label": "Advanced",
+            "type": "SEPARATOR"
+        },
+        {
+            "name": "show_advanced_config",
+            "label": "Show Advanced Config",
+            "type": "Boolean",
+            "mandatory": false
+        },
+        {
+            "name": "optimizer",
+            "label": "Optimizer",
+            "type": "STRING",
+            "mandatory": false,
+            "visibilityCondition" : "!model.show_advanced_config"
+        },
+        {
+            "name": "loss",
+            "label": "Loss",
+            "type": "STRING",
+            "mandatory": false,
+            "visibilityCondition" : "!model.show_advanced_config"
+
+        },
+        {
+            "name": "max_epochs",
+            "label": "Max Epochs",
+            "type": "INT",
+            "mandatory": false,
+            "visibilityCondition" : "!model.show_advanced_config"
+        },
+        {
+            "name": "monitor",
+            "label": "Monitor",
+            "type": "STRING",
+            "mandatory": false,
+            "visibilityCondition" : "!model.show_advanced_config"
+        },
+        {
+            "name": "patience",
+            "label": "Patience",
+            "type": "INT",
+            "mandatory": false,
+            "visibilityCondition" : "!model.show_advanced_config"
+        },
+        {
+            "name": "probability",
+            "label": "Probability",
+            "type": "BOOLEAN",
+            "mandatory": false,
+            "visibilityCondition" : "!model.show_advanced_config"
+        },
+        {
+            "name": "class_weight",
+            "label": "Class Weight",
+            "type": "STRING",
+            "mandatory": false,
+            "visibilityCondition" : "!model.show_advanced_config"
+        },
+        {
+            "name": "scoring",
+            "label": "Scoring",
+            "type": "STRING",
+            "mandatory": false,
+            "visibilityCondition" : "!model.show_advanced_config"
+        }
+    ],
+    "permissions": [],
+    "resultType": "NONE",
+    "resultLabel": "my production",
+    "macroRoles": []
+}

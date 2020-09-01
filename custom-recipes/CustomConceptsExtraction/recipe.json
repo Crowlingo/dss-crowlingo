@@ -1,8 +1,8 @@
 {
     "meta": {
-        "label": "Entities Extraction",
+        "label": "Custom Concepts Extraction",
         "displayOrderRank": 2,
-        "description": "Extract 18 different types of entities in a text"
+        "description": "Extract multilingual custom concepts linked with a knowledge base"
     },
     "kind": "PYTHON",
     "selectableFromDataset": "input_dataset",
@@ -47,14 +47,34 @@
             "label": "Language Column",
             "type": "COLUMN",
             "columnRole": "input_dataset",
-            "mandatory": false,
-            "allowedColumnTypes": [
-                "string"
-            ]
+            "mandatory": false
         },
         {
-            "name": "visualize",
-            "label": "Visualize",
+            "name": "properties",
+            "label": "properties",
+            "type": "STRINGS",
+            "mandatory": false
+        },
+        {
+            "name": "separator_advanced",
+            "label": "Models Parameters",
+            "type": "SEPARATOR"
+        },
+        {
+            "name": "model_id",
+            "label": "Model ID *",
+            "type": "STRING",
+            "mandatory": true
+        },
+        {
+            "name": "model_owner",
+            "label": "Model Owner",
+            "type": "STRING",
+            "mandatory": false
+        },
+        {
+            "name": "prod_version",
+            "label": "Production version",
             "type": "BOOLEAN",
             "mandatory": false
         },

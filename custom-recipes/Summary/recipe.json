@@ -34,7 +34,7 @@
         },
         {
             "name": "text_column",
-            "label": "Text column",
+            "label": "Text column *",
             "type": "COLUMN",
             "columnRole": "input_dataset",
             "mandatory": true,
@@ -47,13 +47,6 @@
             "label": "Language Column",
             "type": "COLUMN",
             "columnRole": "input_dataset",
-            "mandatory": false
-        },
-        {
-            "name": "result_prefix",
-            "label": "Result Prefix",
-            "type": "COLUMN",
-            "columnRole": "output_dataset",
             "mandatory": false
         },
         {
@@ -75,10 +68,22 @@
         },
         {
             "name": "api_configuration_preset",
-            "label": "API configuration preset",
+            "label": "API configuration preset *",
             "type": "PRESET",
             "parameterSetId": "api-configuration",
             "mandatory": true
+        },
+        {
+            "name": "separator_configuration",
+            "label": "Advanced",
+            "type": "SEPARATOR"
+        },
+        {
+            "name": "result_prefix",
+            "label": "Result Prefix",
+            "type": "COLUMN",
+            "columnRole": "output_dataset",
+            "mandatory": false
         }
     ]
 }

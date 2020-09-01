@@ -1,8 +1,8 @@
 {
     "meta": {
-        "label": "Entities Extraction",
+        "label": "FAQ - Search",
         "displayOrderRank": 2,
-        "description": "Extract 18 different types of entities in a text"
+        "description": "Search for the most similar sentences"
     },
     "kind": "PYTHON",
     "selectableFromDataset": "input_dataset",
@@ -53,8 +53,31 @@
             ]
         },
         {
-            "name": "visualize",
-            "label": "Visualize",
+            "name": "variations",
+            "label": "Variations",
+            "type": "STRINGS",
+            "mandatory": false
+        },
+        {
+            "name": "separator_configuration",
+            "label": "Model Parameters",
+            "type": "SEPARATOR"
+        },
+        {
+            "name": "model_id",
+            "label": "Model ID *",
+            "type": "STRING",
+            "mandatory": true
+        },
+        {
+            "name": "model_owner",
+            "label": "Model Owner",
+            "type": "STRING",
+            "mandatory": false
+        },
+        {
+            "name": "prod_version",
+            "label": "Production version",
             "type": "BOOLEAN",
             "mandatory": false
         },

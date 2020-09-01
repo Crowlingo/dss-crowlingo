@@ -29,15 +29,19 @@ def apply_func(func):
 
     output_dataset_name = get_output_names_for_role("output_dataset")[0]
     output_dataset = dataiku.Dataset(output_dataset_name)
-
-    api_configuration_preset = get_recipe_config().get("api_configuration_preset")
-    if api_configuration_preset is None or api_configuration_preset == {}:
-        raise ValueError("Please specify an API configuration preset")
-    api_token = api_configuration_preset.get("crowlingo-api-token")
-
-    client = Client(api_token)
+    client = get_client(get_recipe_config())
 
     result_prefix = get_recipe_config().get("result_prefix")
 
     output_df = input_df.dropna().apply(lambda row: _add_prefix(result_prefix, row, func(client, row)), axis=1)
     output_dataset.write_with_schema(output_df)
+
+
+def get_client(config):
+    api_configuration_preset = config.get("api_configuration_preset")
+    if api_configuration_preset is None or api_configuration_preset == {}:
+        raise ValueError("Please specify an API configuration preset")
+    api_token = api_configuration_preset.get("crowlingo-api-token")
+    api_username = api_configuration_preset.get("crowlingo-api-username")
+    api_password = api_configuration_preset.get("crowlingo-api-password")
+    return Client(api_token, username=api_username, password=api_password)

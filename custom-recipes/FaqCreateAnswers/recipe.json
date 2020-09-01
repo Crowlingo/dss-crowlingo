@@ -1,8 +1,8 @@
 {
     "meta": {
-        "label": "Entities Extraction",
+        "label": "FAQ - Create Answers",
         "displayOrderRank": 2,
-        "description": "Extract 18 different types of entities in a text"
+        "description": "Upload the answers of your faq model"
     },
     "kind": "PYTHON",
     "selectableFromDataset": "input_dataset",
@@ -33,18 +33,8 @@
             "type": "SEPARATOR"
         },
         {
-            "name": "text_column",
-            "label": "Text column *",
-            "type": "COLUMN",
-            "columnRole": "input_dataset",
-            "mandatory": true,
-            "allowedColumnTypes": [
-                "string"
-            ]
-        },
-        {
-            "name": "lang_column",
-            "label": "Language Column",
+            "name": "id_column",
+            "label": "Answer ID Column",
             "type": "COLUMN",
             "columnRole": "input_dataset",
             "mandatory": false,
@@ -53,9 +43,27 @@
             ]
         },
         {
-            "name": "visualize",
-            "label": "Visualize",
-            "type": "BOOLEAN",
+            "name": "variations_prefix",
+            "label": "Variations Prefix Column Key",
+            "type": "STRING",
+            "defaultValue": "variation_",
+            "mandatory": false
+        },
+        {
+            "name": "separator_input",
+            "label": "Model Parameters",
+            "type": "SEPARATOR"
+        },
+        {
+            "name": "model_id",
+            "label": "Model ID *",
+            "type": "STRING",
+            "mandatory": true
+        },
+        {
+            "name": "model_owner",
+            "label": "Model Owner",
+            "type": "STRING",
             "mandatory": false
         },
         {
@@ -65,7 +73,7 @@
         },
         {
             "name": "api_configuration_preset",
-            "label": "API configuration preset *",
+            "label": "API configuration preset",
             "type": "PRESET",
             "parameterSetId": "api-configuration",
             "mandatory": true

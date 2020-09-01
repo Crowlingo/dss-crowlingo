@@ -1,8 +1,8 @@
 {
     "meta": {
-        "label": "Entities Extraction",
+        "label": "Custom Concepts - Create Labels",
         "displayOrderRank": 2,
-        "description": "Extract 18 different types of entities in a text"
+        "description": "Create the labels that you want to link to concepts"
     },
     "kind": "PYTHON",
     "selectableFromDataset": "input_dataset",
@@ -34,7 +34,7 @@
         },
         {
             "name": "text_column",
-            "label": "Text column *",
+            "label": "Text Column *",
             "type": "COLUMN",
             "columnRole": "input_dataset",
             "mandatory": true,
@@ -44,7 +44,7 @@
         },
         {
             "name": "lang_column",
-            "label": "Language Column",
+            "label": "Lang Column",
             "type": "COLUMN",
             "columnRole": "input_dataset",
             "mandatory": false,
@@ -53,9 +53,57 @@
             ]
         },
         {
-            "name": "visualize",
-            "label": "Visualize",
-            "type": "BOOLEAN",
+            "name": "id_column",
+            "label": "Label ID Column",
+            "type": "COLUMN",
+            "columnRole": "input_dataset",
+            "mandatory": false,
+            "allowedColumnTypes": [
+                "string"
+            ]
+        },
+        {
+            "name": "concept_id_column",
+            "label": "Concept ID Column",
+            "type": "COLUMN",
+            "columnRole": "input_dataset",
+            "mandatory": false,
+            "allowedColumnTypes": [
+                "string"
+            ]
+        },
+        {
+            "name": "precision_column",
+            "label": "Precision Column",
+            "type": "COLUMN",
+            "columnRole": "input_dataset",
+            "mandatory": false,
+            "allowedColumnTypes": [
+                "string"
+            ]
+        },
+        {
+            "name": "properties_prefix",
+            "label": "Properties Prefix",
+            "type": "STRING",
+            "defaultValue": "property_",
+            "mandatory": false
+        },
+        {
+            "name": "separator_advanced",
+            "label": "Models Parameters",
+            "type": "SEPARATOR"
+        },
+        {
+            "name": "model_id",
+            "label": "Model ID",
+            "type": "STRING",
+            "mandatory": true
+        },
+        {
+            "name": "model_owner",
+            "label": "Model Owner",
+            "type": "STRING",
             "mandatory": false
         },
         {
