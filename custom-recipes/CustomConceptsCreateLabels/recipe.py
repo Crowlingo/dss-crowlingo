@@ -15,7 +15,7 @@ def call_api(client, row):
                                          labels=[{"id": row.get(id_column), "text": row.get(text_column),
                                                   "lang": row.get(lang_column),
                                                   "concept_id": row.get(concept_id_column),
-                                                  "precision_column": row.get(precision_column)}]).dict()
+                                                  "precision": row.get(precision_column)}]).dict()
 
 
 apply_func(call_api)

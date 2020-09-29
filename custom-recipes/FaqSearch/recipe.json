@@ -59,6 +59,13 @@
             "mandatory": false
         },
         {
+            "name": "limit",
+            "label": "Limit",
+            "type": "INT",
+            "mandatory": false,
+            "defaultValue": 1
+        },
+        {
             "name": "separator_configuration",
             "label": "Model Parameters",
             "type": "SEPARATOR"

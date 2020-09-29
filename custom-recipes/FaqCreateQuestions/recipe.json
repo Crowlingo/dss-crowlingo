@@ -43,7 +43,7 @@
             ]
         },
         {
-            "name": "variations_prefix",
+            "name": "variation_prefix",
             "label": "Variations Prefix Column Key",
             "type": "STRING",
             "defaultValue": "variation_",

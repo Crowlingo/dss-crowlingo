@@ -59,6 +59,7 @@
             "name": "ratio",
             "label": "Ratio",
             "type": "DOUBLE",
+            "defaultValue": 0.01,
             "mandatory": false
         },
         {

@@ -60,7 +60,7 @@
         {
             "name": "show_advanced_config",
             "label": "Show Advanced Config",
-            "type": "Boolean",
+            "type": "BOOLEAN",
             "mandatory": false
         },
         {
@@ -68,14 +68,14 @@
             "label": "Optimizer",
             "type": "STRING",
             "mandatory": false,
-            "visibilityCondition" : "!model.show_advanced_config"
+            "visibilityCondition" : "model.show_advanced_config"
         },
         {
             "name": "loss",
             "label": "Loss",
             "type": "STRING",
             "mandatory": false,
-            "visibilityCondition" : "!model.show_advanced_config"
+            "visibilityCondition" : "model.show_advanced_config"
 
         },
         {
@@ -83,42 +83,42 @@
             "label": "Max Epochs",
             "type": "INT",
             "mandatory": false,
-            "visibilityCondition" : "!model.show_advanced_config"
+            "visibilityCondition" : "model.show_advanced_config"
         },
         {
             "name": "monitor",
             "label": "Monitor",
             "type": "STRING",
             "mandatory": false,
-            "visibilityCondition" : "!model.show_advanced_config"
+            "visibilityCondition" : "model.show_advanced_config"
         },
         {
             "name": "patience",
             "label": "Patience",
             "type": "INT",
             "mandatory": false,
-            "visibilityCondition" : "!model.show_advanced_config"
+            "visibilityCondition" : "model.show_advanced_config"
         },
         {
             "name": "probability",
             "label": "Probability",
             "type": "BOOLEAN",
             "mandatory": false,
-            "visibilityCondition" : "!model.show_advanced_config"
+            "visibilityCondition" : "model.show_advanced_config"
         },
         {
             "name": "class_weight",
             "label": "Class Weight",
             "type": "STRING",
             "mandatory": false,
-            "visibilityCondition" : "!model.show_advanced_config"
+            "visibilityCondition" : "model.show_advanced_config"
         },
         {
             "name": "scoring",
             "label": "Scoring",
             "type": "STRING",
             "mandatory": false,
-            "visibilityCondition" : "!model.show_advanced_config"
+            "visibilityCondition" : "model.show_advanced_config"
         }
     ],
     "permissions": [],

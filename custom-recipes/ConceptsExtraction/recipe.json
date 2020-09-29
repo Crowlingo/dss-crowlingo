@@ -53,6 +53,7 @@
             "name": "precision",
             "label": "Precision",
             "type": "DOUBLE",
+            "defaultValue": 0.9,
             "mandatory": false
         },
         {
@@ -65,13 +66,6 @@
             "name": "properties",
             "label": "properties",
             "type": "STRINGS",
-            "mandatory": false
-        },
-        {
-            "name": "result_prefix",
-            "label": "Result Prefix",
-            "type": "STRING",
-            "defaultValue": "",
             "mandatory": false
         },
         {
@@ -90,6 +84,13 @@
             "name": "separator_advanced",
             "label": "Advanced",
             "type": "SEPARATOR"
+        },
+        {
+            "name": "result_prefix",
+            "label": "Result Prefix",
+            "type": "STRING",
+            "defaultValue": "",
+            "mandatory": false
         }
     ]
 }

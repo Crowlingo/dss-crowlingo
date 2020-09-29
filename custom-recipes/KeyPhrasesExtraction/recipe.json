@@ -55,13 +55,19 @@
         {
             "name": "normalize",
             "label": "Normalize",
-            "type": "BOOLEAN",
+            "type": "SELECT",
+            "selectChoices": [
+                { "value":  null, "label":  "None"},
+                { "value": "lower", "label": "Lower"},
+                { "value": "lemma", "label": "Lemma"}
+            ],
             "mandatory": false
         },
         {
             "name": "limit",
             "label": "Limit",
             "type": "INT",
+            "defaultValue": 10,
             "mandatory": false
         },
         {

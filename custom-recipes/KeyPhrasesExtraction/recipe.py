@@ -5,6 +5,7 @@ text_column = get_recipe_config().get("text_column")
 lang_column = get_recipe_config().get("lang_column")
 limit = get_recipe_config().get("limit")
 normalize = get_recipe_config().get("normalize")
+normalize = normalize if normalize else None
 
 
 def call_api(client, row):

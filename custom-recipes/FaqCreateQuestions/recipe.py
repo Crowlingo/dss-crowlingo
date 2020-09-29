@@ -13,9 +13,9 @@ model_owner = get_recipe_config().get("model_owner")
 
 def call_api(client, row):
     variations = {k[len(variation_prefix):]: v for k, v in row.items() if k.startswith(variation_prefix)}
-    return client.faq.create_answers(model_id, questions=[{"id": row.get(id_column), "variations": variations,
-                                                           "answer_id": row.get(answer_id_column)}],
-                                     model_owner=model_owner).dict()
+    return client.faq.create_questions(model_id, questions=[{"id": row.get(id_column), "variations": variations,
+                                                             "answer_id": row.get(answer_id_column)}],
+                                       model_owner=model_owner).dict()
 
 
 apply_func(call_api)

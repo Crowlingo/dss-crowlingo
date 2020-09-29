@@ -41,7 +41,9 @@ def get_client(config):
     api_configuration_preset = config.get("api_configuration_preset")
     if api_configuration_preset is None or api_configuration_preset == {}:
         raise ValueError("Please specify an API configuration preset")
-    api_token = api_configuration_preset.get("crowlingo-api-token")
-    api_username = api_configuration_preset.get("crowlingo-api-username")
-    api_password = api_configuration_preset.get("crowlingo-api-password")
-    return Client(api_token, username=api_username, password=api_password)
+    print(api_configuration_preset)
+    api_token = api_configuration_preset.get("crowlingo-token")
+    api_username = api_configuration_preset.get("crowlingo-username")
+    api_password = api_configuration_preset.get("crowlingo-password")
+    api_url = api_configuration_preset.get("crowlingo-url")
+    return Client(api_token, username=api_username, password=api_password, url=api_url)
