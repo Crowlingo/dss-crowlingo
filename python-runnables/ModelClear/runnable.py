@@ -30,4 +30,4 @@ class MyRunnable(Runnable):
         The progress_callback is a function expecting 1 value: current progress
         """
         client = get_client(self.config)
-        return str(client.model.clear(self.config["model_id"], model_owner=self.config.get("model_owner")))
+        return str(client.model.clear(self.config["model_id"]))

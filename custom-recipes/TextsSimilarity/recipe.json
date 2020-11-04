@@ -2,14 +2,15 @@
     "meta": {
         "label": "Texts Similarity",
         "displayOrderRank": 2,
-        "description": "Compute the semantic similarity between two texts"
+        "description": "Compute the semantic similarity between two texts",
+        "icon": "icon-file-text"
     },
     "kind": "PYTHON",
     "selectableFromDataset": "input_dataset",
     "inputRoles": [
         {
             "name": "input_dataset",
-            "label": "Input Dataset",
+            "label": "Input dataset",
             "description": "Dataset containing the text data to analyze",
             "arity": "UNARY",
             "required": true,
@@ -34,7 +35,8 @@
         },
         {
             "name": "text_column",
-            "label": "Text column *",
+            "label": "Text column",
+            "description": "Column containing the first text to compare.",
             "type": "COLUMN",
             "columnRole": "input_dataset",
             "mandatory": true,
@@ -44,7 +46,8 @@
         },
         {
             "name": "text2_column",
-            "label": "Text 2 column *",
+            "label": "Text 2 column",
+            "description": "Column containing the second text to compare.",
             "type": "COLUMN",
             "columnRole": "input_dataset",
             "mandatory": true,
@@ -55,22 +58,26 @@
         {
             "name": "lang_column",
             "label": "Language column",
+            "description": "Column containing the language of the first text to compare.",
             "type": "COLUMN",
             "columnRole": "input_dataset",
             "mandatory": false,
             "allowedColumnTypes": [
                 "string"
-            ]
+            ],
+            "visibilityCondition": "model.expert"
         },
         {
             "name": "lang2_column",
             "label": "Language 2 column",
+            "description": "Column containing the language of the second text to compare.",
             "type": "COLUMN",
             "columnRole": "input_dataset",
             "mandatory": false,
             "allowedColumnTypes": [
                 "string"
-            ]
+            ],
+            "visibilityCondition": "model.expert"
         },
         {
             "name": "separator_configuration",
@@ -79,7 +86,7 @@
         },
         {
             "name": "api_configuration_preset",
-            "label": "API configuration preset *",
+            "label": "API configuration preset",
             "type": "PRESET",
             "parameterSetId": "api-configuration",
             "mandatory": true
@@ -90,11 +97,10 @@
             "type": "SEPARATOR"
         },
         {
-            "name": "result_prefix",
-            "label": "Result Prefix",
-            "type": "STRING",
-            "defaultValue": "",
-            "mandatory": false
+            "name": "expert",
+            "label": "Expert mode",
+            "type": "BOOLEAN",
+            "defaultValue": false
         }
     ]
 }

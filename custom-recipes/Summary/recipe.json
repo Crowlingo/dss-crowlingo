@@ -2,14 +2,15 @@
     "meta": {
         "label": "Summary",
         "displayOrderRank": 2,
-        "description": "Extract a summary from your text"
+        "description": "Extract a summary from your text",
+        "icon": "icon-file-text"
     },
     "kind": "PYTHON",
     "selectableFromDataset": "input_dataset",
     "inputRoles": [
         {
             "name": "input_dataset",
-            "label": "Input Dataset",
+            "label": "Input dataset",
             "description": "Dataset containing the text data to analyze",
             "arity": "UNARY",
             "required": true,
@@ -34,7 +35,8 @@
         },
         {
             "name": "text_column",
-            "label": "Text column *",
+            "label": "Text column",
+            "description": "Column containing the text data to summarize.",
             "type": "COLUMN",
             "columnRole": "input_dataset",
             "mandatory": true,
@@ -44,20 +46,25 @@
         },
         {
             "name": "lang_column",
-            "label": "Language Column",
+            "label": "Language column",
+            "description": "Column containing the language of the text data to summarize.",
             "type": "COLUMN",
             "columnRole": "input_dataset",
-            "mandatory": false
+            "mandatory": false,
+            "visibilityCondition": "model.expert"
         },
         {
             "name": "nb_sentences",
             "label": "Number of sentences",
+            "description": "Max number of sentences in the summary.",
             "type": "INT",
-            "mandatory": false
+            "mandatory": false,
+            "visibilityCondition": "model.expert"
         },
         {
             "name": "ratio",
             "label": "Ratio",
+            "description": "Reduction ratio of the text.",
             "type": "DOUBLE",
             "defaultValue": 0.01,
             "mandatory": false
@@ -69,7 +76,7 @@
         },
         {
             "name": "api_configuration_preset",
-            "label": "API configuration preset *",
+            "label": "API configuration preset",
             "type": "PRESET",
             "parameterSetId": "api-configuration",
             "mandatory": true
@@ -80,11 +87,10 @@
             "type": "SEPARATOR"
         },
         {
-            "name": "result_prefix",
-            "label": "Result Prefix",
-            "type": "COLUMN",
-            "columnRole": "output_dataset",
-            "mandatory": false
+            "name": "expert",
+            "label": "Expert mode",
+            "type": "BOOLEAN",
+            "defaultValue": false
         }
     ]
 }

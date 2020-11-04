@@ -2,14 +2,15 @@
     "meta": {
         "label": "Syntax",
         "displayOrderRank": 2,
-        "description": "Extract the syntax of your text (POS Tagging, Lemmas, grammatical features ...)"
+        "description": "Extract the syntax of your text (POS Tagging, Lemmas, grammatical features ...)",
+        "icon": "icon-file-text"
     },
     "kind": "PYTHON",
     "selectableFromDataset": "input_dataset",
     "inputRoles": [
         {
             "name": "input_dataset",
-            "label": "Input Dataset",
+            "label": "Input dataset",
             "description": "Dataset containing the text data to analyze",
             "arity": "UNARY",
             "required": true,
@@ -34,7 +35,8 @@
         },
         {
             "name": "text_column",
-            "label": "Text column *",
+            "label": "Text column",
+            "description": "Column containing the text data to analyze.",
             "type": "COLUMN",
             "columnRole": "input_dataset",
             "mandatory": true,
@@ -45,19 +47,23 @@
         {
             "name": "lang_column",
             "label": "Language column",
+            "description": "Column containing the language of the text data to analyse.",
             "type": "COLUMN",
             "columnRole": "input_dataset",
             "mandatory": false,
             "allowedColumnTypes": [
                 "string"
-            ]
+            ],
+            "visibilityCondition": "model.expert"
         },
         {
             "name": "visualize",
             "label": "Visualize",
+            "description": "Add SVG visualisation of the result.",
             "type": "BOOLEAN",
             "columnRole": "input_dataset",
-            "mandatory": false
+            "mandatory": false,
+            "visibilityCondition": "model.expert"
         },
         {
             "name": "separator_configuration",
@@ -77,11 +83,10 @@
             "type": "SEPARATOR"
         },
         {
-            "name": "result_prefix",
-            "label": "Result Prefix",
-            "type": "STRING",
-            "defaultValue": "",
-            "mandatory": false
+            "name": "expert",
+            "label": "Expert mode",
+            "type": "BOOLEAN",
+            "defaultValue": false
         }
     ]
 }

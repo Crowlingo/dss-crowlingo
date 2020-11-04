@@ -2,14 +2,15 @@
     "meta": {
         "label": "Extract Article",
         "displayOrderRank": 2,
-        "description": "Extract every important information from a webpage (title, content, main image ...)"
+        "description": "Extract every important information from a webpage (title, content, main image ...)",
+        "icon": "icon-file-text"
     },
     "kind": "PYTHON",
     "selectableFromDataset": "input_dataset",
     "inputRoles": [
         {
             "name": "input_dataset",
-            "label": "Input Dataset",
+            "label": "Input dataset",
             "description": "Dataset containing the text data to analyze",
             "arity": "UNARY",
             "required": true,
@@ -34,7 +35,8 @@
         },
         {
             "name": "url_column",
-            "label": "URL column *",
+            "label": "URL column",
+            "description": "Column containing the URLs to analyse.",
             "type": "COLUMN",
             "columnRole": "input_dataset",
             "mandatory": true,
@@ -49,22 +51,10 @@
         },
         {
             "name": "api_configuration_preset",
-            "label": "API configuration preset *",
+            "label": "API configuration preset",
             "type": "PRESET",
             "parameterSetId": "api-configuration",
             "mandatory": true
-        },
-        {
-            "name": "separator_configuration",
-            "label": "Advanced",
-            "type": "SEPARATOR"
-        },
-        {
-            "name": "result_prefix",
-            "label": "Result Prefix",
-            "type": "STRING",
-            "defaultValue": "",
-            "mandatory": false
         }
     ]
 }

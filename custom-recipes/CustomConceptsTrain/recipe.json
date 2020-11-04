@@ -1,0 +1,170 @@
+{
+    "meta": {
+        "label": "Custom Concepts - Train",
+        "displayOrderRank": 2,
+        "description": "Train your custom concepts extraction model",
+        "icon": "icon-file-text"
+    },
+    "kind": "PYTHON",
+    "selectableFromDataset": "input_dataset",
+    "inputRoles": [
+        {
+            "name": "concepts_input_dataset",
+            "label": "Concepts input dataset",
+            "description": "Dataset containing the text data to analyze",
+            "arity": "UNARY",
+            "required": true,
+            "acceptsDataset": true
+        },
+        {
+            "name": "labels_input_dataset",
+            "label": "Labels input dataset",
+            "description": "Dataset containing the text data to analyze",
+            "arity": "UNARY",
+            "required": true,
+            "acceptsDataset": true
+        }
+    ],
+    "outputRoles": [
+        {
+            "name": "concepts_output_dataset",
+            "label": "Concepts output dataset",
+            "description": "Dataset with enriched output",
+            "arity": "UNARY",
+            "required": true,
+            "acceptsDataset": true
+        },
+        {
+            "name": "labels_output_dataset",
+            "label": "Labels output dataset",
+            "description": "Dataset with enriched output",
+            "arity": "UNARY",
+            "required": true,
+            "acceptsDataset": true
+        }
+    ],
+    "params": [
+        {
+            "name": "separator_input",
+            "label": "Concepts Input Parameters",
+            "type": "SEPARATOR"
+        },
+        {
+            "name": "concepts_id_column",
+            "description": "Column containing the ID of the concepts to train.",
+            "label": "ID column",
+            "type": "COLUMN",
+            "columnRole": "concepts_input_dataset",
+            "mandatory": true,
+            "allowedColumnTypes": [
+                "string"
+            ]
+        },
+        {
+            "name": "properties_prefix",
+            "label": "Properties prefix",
+            "description": "Prefix of the columns containing a concept property.",
+            "type": "STRING",
+            "defaultValue": "property_",
+            "mandatory": false,
+            "visibilityCondition": "model.expert"
+        },
+        {
+            "name": "separator_input",
+            "label": "Labels Input Parameters",
+            "type": "SEPARATOR"
+        },{
+            "name": "text_column",
+            "label": "Text column",
+            "description": "Column containing the text of the labels.",
+            "type": "COLUMN",
+            "columnRole": "labels_input_dataset",
+            "mandatory": true,
+            "allowedColumnTypes": [
+                "string"
+            ]
+        },
+        {
+            "name": "lang_column",
+            "label": "Lang column",
+            "description": "Column containing the language of the labels.",
+            "type": "COLUMN",
+            "columnRole": "labels_input_dataset",
+            "mandatory": false,
+            "allowedColumnTypes": [
+                "string"
+            ],
+            "visibilityCondition": "model.expert"
+        },
+        {
+            "name": "id_column",
+            "label": "ID column",
+            "description": "Column containing the ID of the label. Will generate one if it is not given.",
+            "type": "COLUMN",
+            "columnRole": "labels_input_dataset",
+            "mandatory": false,
+            "allowedColumnTypes": [
+                "string"
+            ],
+            "visibilityCondition": "model.expert"
+        },
+        {
+            "name": "concept_id_column",
+            "label": "Concept ID column",
+            "description": "Column containing the ID of the concept associated to the label. Will not train the label if the concept is null.",
+            "type": "COLUMN",
+            "columnRole": "labels_input_dataset",
+            "mandatory": false,
+            "allowedColumnTypes": [
+                "string"
+            ]
+        },
+        {
+            "name": "precision_column",
+            "label": "Precision column",
+            "description": "Column containing the precision of the matching. The higher is the precision, the less you will match variations and translations.",
+            "type": "COLUMN",
+            "columnRole": "labels_input_dataset",
+            "mandatory": false,
+            "allowedColumnTypes": [
+                "string"
+            ],
+            "visibilityCondition": "model.expert"
+        },
+        {
+            "name": "separator_input",
+            "label": "Model Parameters",
+            "type": "SEPARATOR"
+        },
+        {
+            "name": "model_id",
+            "label": "Model ID",
+            "description": "The ID of the classification model you want to use. It will create a new model if the model does not exists.",
+            "type": "STRING",
+            "mandatory": true
+        },
+        {
+            "name": "separator_configuration",
+            "label": "Configuration",
+            "type": "SEPARATOR"
+        },
+        {
+            "name": "api_configuration_preset",
+            "label": "API configuration preset",
+            "type": "PRESET",
+            "parameterSetId": "api-configuration",
+            "mandatory": true
+        },
+        {
+            "name": "separator_advanced",
+            "label": "Advanced",
+            "type": "SEPARATOR"
+        },
+        {
+            "name": "expert",
+            "label": "Expert mode",
+            "type": "BOOLEAN",
+            "defaultValue": false
+        }
+    ]
+}

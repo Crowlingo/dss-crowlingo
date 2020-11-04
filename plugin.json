@@ -7,9 +7,9 @@
         "description": "Use Crowlingo APIs for  Natural Language to perform multilingual analysis like Named Entity Recognition, Classification or Summarization",
         "author": "Crowlingo (Jonas Bouaziz and Jeremie Zimmer)",
         "tags": [
-            "Crowlingo",
-            "Multilingual",
             "NLP"
         ]
-    }
+    },
+    "icon": "icon-file-text",
+    "licenseInfo": "Apache Software License"
 }
