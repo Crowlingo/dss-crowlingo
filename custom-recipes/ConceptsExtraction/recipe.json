@@ -2,7 +2,7 @@
     "meta": {
         "label": "Concepts Extraction",
         "displayOrderRank": 2,
-        "description": "Extract multilingual concepts linked with a knowledge base",
+        "description": "Extract multilingual concepts linked to a knowledge base",
         "icon": "icon-file-text"
     },
     "kind": "PYTHON",
@@ -56,7 +56,7 @@
         {
             "name": "precision",
             "label": "Precision",
-            "description": "Precision of the extraction. The higher is the value, the more concepts you will get.",
+            "description": "Precision of the extraction. The higher the value, the more concepts you will get.",
             "type": "DOUBLE",
             "defaultValue": 0.9,
             "mandatory": false,
@@ -65,7 +65,7 @@
         {
             "name": "split",
             "label": "Split",
-            "description": "Split the text into multiple smaller texts. Useful if you have a very long text and need to get a all the possible concepts.",
+            "description": "Divide the text into several smaller texts. Relevant if you have a very long text and need all possible concepts.",
             "type": "BOOLEAN",
             "mandatory": false,
             "visibilityCondition": "model.expert"
@@ -73,7 +73,7 @@
         {
             "name": "properties",
             "label": "properties",
-            "description": "Properties needed associated with the concept (titles, coordinates ...).",
+            "description": "Properties associated with the concept (titles, coordinates ...).",
             "type": "STRINGS",
             "mandatory": false,
             "visibilityCondition": "model.expert"

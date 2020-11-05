@@ -47,7 +47,7 @@
         {
             "name": "lang_column",
             "label": "Language column",
-            "description": "Column containing the language of the text data to search.",
+            "description": "Column containing the language of the textual data to find.",
             "type": "COLUMN",
             "columnRole": "input_dataset",
             "mandatory": false,

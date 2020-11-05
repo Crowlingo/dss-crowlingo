@@ -12,7 +12,7 @@
             "name": "separator_authentification",
             "label": "Authentification",
             "type": "SEPARATOR",
-            "description": "Please refer to the Crowlingo documentation: https://crowlingo.com/docs/"
+            "description": "Please refer to Crowlingo documentation: https://crowlingo.com/docs/"
         },
         {
             "name": "crowlingo-token",
@@ -24,7 +24,7 @@
         {
             "name": "crowlingo-url",
             "label": "Crowlingo url",
-            "description": "Base Url for Crowlingo endpoints. Set it if you have a dedicated environment.",
+            "description": "Base Url for Crowlingo endpoints. You need to provide yours if you have a dedicated environment.",
             "type": "STRING",
             "defaultValue": "https://crowlingo.com/api/v1",
             "mandatory": false

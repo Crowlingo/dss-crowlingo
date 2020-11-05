@@ -2,7 +2,7 @@
     "meta": {
         "label": "Custom Concepts Extraction",
         "displayOrderRank": 2,
-        "description": "Extract multilingual custom concepts linked with a knowledge base",
+        "description": "Extract multilingual custom concepts linked to a knowledge base",
         "icon": "icon-file-text"
     },
     "kind": "PYTHON",

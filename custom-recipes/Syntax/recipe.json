@@ -47,7 +47,7 @@
         {
             "name": "lang_column",
             "label": "Language column",
-            "description": "Column containing the language of the text data to analyse.",
+            "description": "Column containing the language of the text data to analyze.",
             "type": "COLUMN",
             "columnRole": "input_dataset",
             "mandatory": false,
@@ -59,7 +59,7 @@
         {
             "name": "visualize",
             "label": "Visualize",
-            "description": "Add SVG visualisation of the result.",
+            "description": "Add SVG visualization of the result.",
             "type": "BOOLEAN",
             "columnRole": "input_dataset",
             "mandatory": false,

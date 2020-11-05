@@ -99,7 +99,7 @@
         {
             "name": "id_column",
             "label": "ID column",
-            "description": "Column containing the ID of the label. Will generate one if it is not given.",
+            "description": "Column containing the ID of the label. Will generate one if it is not provided.",
             "type": "COLUMN",
             "columnRole": "labels_input_dataset",
             "mandatory": false,
@@ -139,7 +139,7 @@
         {
             "name": "model_id",
             "label": "Model ID",
-            "description": "The ID of the classification model you want to use. It will create a new model if the model does not exists.",
+            "description": "The ID of the classification model you want to use. It will create a new model if the model does not exist.",
             "type": "STRING",
             "mandatory": true
         },
