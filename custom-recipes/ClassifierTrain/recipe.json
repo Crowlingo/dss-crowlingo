@@ -1,15 +1,16 @@
 {
     "meta": {
-        "label": "Classifier - Create documents",
+        "label": "Classifier - Train",
         "displayOrderRank": 2,
-        "description": "Upload the training data of your classification model"
+        "description": "Train a classification model based on your dataset",
+        "icon": "icon-file-text"
     },
     "kind": "PYTHON",
     "selectableFromDataset": "input_dataset",
     "inputRoles": [
         {
             "name": "input_dataset",
-            "label": "Input Dataset",
+            "label": "Input dataset",
             "description": "Dataset containing the text data to analyze",
             "arity": "UNARY",
             "required": true,
@@ -34,7 +35,8 @@
         },
         {
             "name": "text_column",
-            "label": "Text column *",
+            "label": "Text column",
+            "description": "Column containing the text data to train the model.",
             "type": "COLUMN",
             "columnRole": "input_dataset",
             "mandatory": true,
@@ -44,17 +46,20 @@
         },
         {
             "name": "lang_column",
-            "label": "Language Column",
+            "label": "Language column",
+            "description": "Column containing the language of the text data to train the model.",
             "type": "COLUMN",
             "columnRole": "input_dataset",
             "mandatory": false,
             "allowedColumnTypes": [
                 "string"
-            ]
+            ],
+            "visibilityCondition": "model.expert"
         },
         {
             "name": "class_id_column",
-            "label": "Class ID Column",
+            "label": "Class ID column",
+            "description": "Column containing the class of the text.",
             "type": "COLUMN",
             "columnRole": "input_dataset",
             "mandatory": false,
@@ -64,13 +69,15 @@
         },
         {
             "name": "id_column",
-            "label": "Document ID Column",
+            "label": "Document ID column",
+            "description": "Column containing the ID of the document. Will generate one if it is not provided",
             "type": "COLUMN",
             "columnRole": "input_dataset",
             "mandatory": false,
             "allowedColumnTypes": [
                 "string"
-            ]
+            ],
+            "visibilityCondition": "model.expert"
         },
         {
             "name": "separator_input",
@@ -80,14 +87,42 @@
         {
             "name": "model_id",
             "label": "Model ID",
+            "description": "The ID of the classification model you want to use. It will create a new model if the model does not exist.",
             "type": "STRING",
             "mandatory": true
         },
         {
-            "name": "model_owner",
-            "label": "Model Owner",
+            "name": "separator_input",
+            "label": "Training Parameters",
+            "type": "SEPARATOR"
+        },
+        {
+            "name": "model_type",
+            "label": "Model type",
+            "description": "Type of classifier to use. Prefer Deep Learning for complex classification problems and SVM for small datasets.",
             "type": "STRING",
-            "mandatory": false
+            "mandatory": false,
+            "defaultValue": "svm",
+            "selectChoices": [
+                {
+                    "value": "svm",
+                    "label": "SVM"
+                },
+                {
+                    "value": "deep",
+                    "label": "Deep Learning"
+                }
+            ],
+            "visibilityCondition": "model.expert"
+        },
+        {
+            "name": "train_ratio",
+            "label": "Train ratio",
+            "description": "Ratio of the dataset used to train the model. The rest will be used to test the model.",
+            "type": "DOUBLE",
+            "mandatory": false,
+            "defaultValue": 0.8,
+            "visibilityCondition": "model.expert"
         },
         {
             "name": "separator_configuration",
@@ -96,7 +131,7 @@
         },
         {
             "name": "api_configuration_preset",
-            "label": "API configuration preset *",
+            "label": "API configuration preset",
             "type": "PRESET",
             "parameterSetId": "api-configuration",
             "mandatory": true
@@ -107,11 +142,10 @@
             "type": "SEPARATOR"
         },
         {
-            "name": "result_prefix",
-            "label": "Result Prefix",
-            "type": "STRING",
-            "defaultValue": "",
-            "mandatory": false
+            "name": "expert",
+            "label": "Expert mode",
+            "type": "BOOLEAN",
+            "defaultValue": false
         }
     ]
 }

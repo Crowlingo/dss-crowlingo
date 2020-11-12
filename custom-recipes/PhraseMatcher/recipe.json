@@ -2,14 +2,15 @@
     "meta": {
         "label": "Phrase Matcher",
         "displayOrderRank": 2,
-        "description": "Match a word or expression in your without worrying about translations or variations"
+        "description": "Match a word or expression in your without worrying about translations or variations",
+        "icon": "icon-file-text"
     },
     "kind": "PYTHON",
     "selectableFromDataset": "input_dataset",
     "inputRoles": [
         {
             "name": "input_dataset",
-            "label": "Input Dataset",
+            "label": "Input dataset",
             "description": "Dataset containing the text data to analyze",
             "arity": "UNARY",
             "required": true,
@@ -34,7 +35,8 @@
         },
         {
             "name": "text_column",
-            "label": "Text column *",
+            "label": "Text column",
+            "description": "Column containing the text data to analyze.",
             "type": "COLUMN",
             "columnRole": "input_dataset",
             "mandatory": true,
@@ -44,34 +46,44 @@
         },
         {
             "name": "lang_column",
-            "label": "Language Column",
+            "label": "Language column",
+            "description": "Column containing the language of the text data to analyze.",
             "type": "COLUMN",
             "columnRole": "input_dataset",
-            "mandatory": false
+            "mandatory": false,
+            "visibilityCondition": "model.expert"
         },
         {
             "name": "phrase",
             "label": "Phrase",
+            "description": "Column containing the phrase text to match.",
             "type": "STRING",
             "mandatory": true
         },
         {
             "name": "phrase_lang",
-            "label": "Phrase Language",
+            "label": "Phrase language",
+            "description": "Column containing the language of the phrase text to match.",
             "type": "STRING",
-            "mandatory": false
+            "mandatory": false,
+            "visibilityCondition": "model.expert"
         },
         {
             "name": "visualize",
             "label": "Visualize",
+            "description": "Add SVG visualization of the result.",
             "type": "BOOLEAN",
-            "mandatory": false
+            "mandatory": false,
+            "visibilityCondition": "model.expert"
         },
         {
             "name": "precision",
             "label": "Precision",
+            "description": "Precision of the matching. The higher is the precision, the less you will match variations and translations.",
             "type": "DOUBLE",
-            "mandatory": false
+            "mandatory": false,
+            "defaultValue": 0.75,
+            "visibilityCondition": "model.expert"
         },
         {
             "name": "separator_configuration",
@@ -80,7 +92,7 @@
         },
         {
             "name": "api_configuration_preset",
-            "label": "API configuration preset *",
+            "label": "API configuration preset",
             "type": "PRESET",
             "parameterSetId": "api-configuration",
             "mandatory": true
@@ -91,11 +103,10 @@
             "type": "SEPARATOR"
         },
         {
-            "name": "result_prefix",
-            "label": "Result Prefix",
-            "type": "STRING",
-            "defaultValue": "",
-            "mandatory": false
+            "name": "expert",
+            "label": "Expert mode",
+            "type": "BOOLEAN",
+            "defaultValue": false
         }
     ]
 }

@@ -2,7 +2,7 @@
     "meta": {
         "label": "API configuration",
         "description": "Define presets for users to call the API with specific credentials, quota and parallelization parameters",
-        "icon": "icon-gcp-natural-language-api icon-cloud"
+        "icon": "icon-file-text"
     },
     "defaultDefinableAtProjectLevel": true,
     "defaultDefinableInline": false,
@@ -12,27 +12,21 @@
             "name": "separator_authentification",
             "label": "Authentification",
             "type": "SEPARATOR",
-            "description": "Please refer to the Crowlingo documentation: https://crowlingo.com/docs/"
+            "description": "Please refer to Crowlingo documentation: https://crowlingo.com/docs/"
         },
         {
-            "name": "crowlingo-api-token",
+            "name": "crowlingo-token",
             "label": "Crowlingo API Token",
             "description": "Token used to query Crowlingo Services.",
-            "type": "STRING",
+            "type": "PASSWORD",
             "mandatory": false
         },
         {
-            "name": "crowlingo-api-username",
-            "label": "Crowlingo username",
-            "description": "Username of Crowlingo account, not necessary if API token is not empty.",
+            "name": "crowlingo-url",
+            "label": "Crowlingo url",
+            "description": "Base Url for Crowlingo endpoints. You need to provide yours if you have a dedicated environment.",
             "type": "STRING",
-            "mandatory": false
-        },
-        {
-            "name": "crowlingo-api-password",
-            "label": "Crowlingo password",
-            "description": "Password of Crowlingo account, not necessary if API token is not empty.",
-            "type": "STRING",
+            "defaultValue": "https://crowlingo.com/api/v1",
             "mandatory": false
         }
     ]

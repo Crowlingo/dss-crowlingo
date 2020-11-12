@@ -2,14 +2,15 @@
     "meta": {
         "label": "Detect Language",
         "displayOrderRank": 2,
-        "description": "Detect the language of your text"
+        "description": "Detect the language of your text",
+        "icon": "icon-file-text"
     },
     "kind": "PYTHON",
     "selectableFromDataset": "input_dataset",
     "inputRoles": [
         {
             "name": "input_dataset",
-            "label": "Input Dataset",
+            "label": "Input dataset",
             "description": "Dataset containing the text data to analyze",
             "arity": "UNARY",
             "required": true,
@@ -34,7 +35,8 @@
         },
         {
             "name": "text_column",
-            "label": "Text column *",
+            "label": "Text column",
+            "description": "Column containing the text data to analyze.",
             "type": "COLUMN",
             "columnRole": "input_dataset",
             "mandatory": true,
@@ -48,18 +50,6 @@
             "type": "PRESET",
             "parameterSetId": "api-configuration",
             "mandatory": true
-        },
-        {
-            "name": "separator_configuration",
-            "label": "Advanced",
-            "type": "SEPARATOR"
-        },
-        {
-            "name": "result_prefix",
-            "label": "Result Prefix",
-            "type": "STRING",
-            "defaultValue": "",
-            "mandatory": false
         }
     ]
 }

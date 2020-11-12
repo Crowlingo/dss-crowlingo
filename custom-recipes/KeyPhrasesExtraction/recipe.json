@@ -2,14 +2,15 @@
     "meta": {
         "label": "Key Phrases Extraction",
         "displayOrderRank": 2,
-        "description": "Extract the key phrases of your text"
+        "description": "Extract the key phrases of your text",
+        "icon": "icon-file-text"
     },
     "kind": "PYTHON",
     "selectableFromDataset": "input_dataset",
     "inputRoles": [
         {
             "name": "input_dataset",
-            "label": "Input Dataset",
+            "label": "Input dataset",
             "description": "Dataset containing the text data to analyze",
             "arity": "UNARY",
             "required": true,
@@ -34,7 +35,8 @@
         },
         {
             "name": "text_column",
-            "label": "Text column *",
+            "label": "Text column",
+            "description": "Column containing the text data to analyze.",
             "type": "COLUMN",
             "columnRole": "input_dataset",
             "mandatory": true,
@@ -44,25 +46,37 @@
         },
         {
             "name": "lang_column",
-            "label": "Language Column",
+            "label": "Language column",
+            "description": "Column containing the language of the text data to analyze.",
             "type": "COLUMN",
             "columnRole": "input_dataset",
             "mandatory": false,
             "allowedColumnTypes": [
                 "string"
-            ]
+            ],
+            "visibilityCondition": "model.expert"
         },
         {
             "name": "normalize",
             "label": "Normalize",
-            "type": "BOOLEAN",
-            "mandatory": false
+            "description": "Normalization to apply on the key phrases.",
+            "type": "SELECT",
+            "selectChoices": [
+                { "value":  null, "label":  "None"},
+                { "value": "lower", "label": "Lower"},
+                { "value": "lemma", "label": "Lemma"}
+            ],
+            "mandatory": false,
+            "visibilityCondition": "model.expert"
         },
         {
             "name": "limit",
             "label": "Limit",
+            "description": "Max number of key phrases to get.",
             "type": "INT",
-            "mandatory": false
+            "defaultValue": 10,
+            "mandatory": false,
+            "visibilityCondition": "model.expert"
         },
         {
             "name": "separator_configuration",
@@ -71,7 +85,7 @@
         },
         {
             "name": "api_configuration_preset",
-            "label": "API configuration preset *",
+            "label": "API configuration preset",
             "type": "PRESET",
             "parameterSetId": "api-configuration",
             "mandatory": true
@@ -82,11 +96,10 @@
             "type": "SEPARATOR"
         },
         {
-            "name": "result_prefix",
-            "label": "Result Prefix",
-            "type": "STRING",
-            "defaultValue": "",
-            "mandatory": false
+            "name": "expert",
+            "label": "Expert mode",
+            "type": "BOOLEAN",
+            "defaultValue": false
         }
     ]
 }

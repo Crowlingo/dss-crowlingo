@@ -1,0 +1,141 @@
+{
+    "meta": {
+        "label": "FAQ - Train",
+        "displayOrderRank": 2,
+        "description": "Train your FAQ model",
+        "icon": "icon-file-text"
+    },
+    "kind": "PYTHON",
+    "selectableFromDataset": "input_dataset",
+    "inputRoles": [
+        {
+            "name": "answers_input_dataset",
+            "label": "Answers input dataset",
+            "description": "Dataset containing the text data to analyze",
+            "arity": "UNARY",
+            "required": true,
+            "acceptsDataset": true
+        },
+        {
+            "name": "questions_input_dataset",
+            "label": "Questions input dataset",
+            "description": "Dataset containing the text data to analyze",
+            "arity": "UNARY",
+            "required": true,
+            "acceptsDataset": true
+        }
+    ],
+    "outputRoles": [
+        {
+            "name": "answers_output_dataset",
+            "label": "Answers output dataset",
+            "description": "Dataset with enriched output",
+            "arity": "UNARY",
+            "required": true,
+            "acceptsDataset": true
+        },
+        {
+            "name": "questions_output_dataset",
+            "label": "Questions output dataset",
+            "description": "Dataset with enriched output",
+            "arity": "UNARY",
+            "required": true,
+            "acceptsDataset": true
+        }
+    ],
+    "params": [
+
+        {
+            "name": "separator_input",
+            "label": "Input Parameters",
+            "type": "SEPARATOR"
+        },
+        {
+            "name": "variation_prefix",
+            "label": "Variations prefix column key",
+            "description": "Prefix of the text variations columns names.",
+            "type": "STRING",
+            "defaultValue": "variation_",
+            "mandatory": false
+        },
+        {
+            "name": "separator_input",
+            "label": "Answers Input Parameters",
+            "type": "SEPARATOR"
+        },
+        {
+            "name": "answers_id_column",
+            "label": "ID column",
+            "description": "Column containing the ID of the answer. Will generate one if it is not provided",
+            "type": "COLUMN",
+            "columnRole": "answers_input_dataset",
+            "mandatory": false,
+            "allowedColumnTypes": [
+                "string"
+            ]
+        },
+        {
+            "name": "separator_input",
+            "label": "Questions Input Parameters",
+            "type": "SEPARATOR"
+        },
+        {
+            "name": "questions_id_column",
+            "label": "ID column",
+            "description": "Column containing the ID of the questions. Will generate one if it is not provided",
+            "type": "COLUMN",
+            "columnRole": "questions_input_dataset",
+            "mandatory": false,
+            "allowedColumnTypes": [
+                "string"
+            ],
+            "visibilityCondition": "model.expert"
+        },
+        {
+            "name": "answer_id_column",
+            "label": "Answer ID column",
+            "description": "Column containing the ID of the answer associated with the question. Will not train the question if the value is null.",
+            "type": "COLUMN",
+            "columnRole": "questions_input_dataset",
+            "mandatory": false,
+            "allowedColumnTypes": [
+                "string"
+            ]
+        },
+        {
+            "name": "separator_input",
+            "label": "Model Parameters",
+            "type": "SEPARATOR"
+        },
+        {
+            "name": "model_id",
+            "label": "Model ID",
+            "description": "The ID of the FAQ model you want to use. It will create a new model if the model does not exist.",
+            "type": "STRING",
+            "mandatory": true
+        },
+        {
+            "name": "separator_configuration",
+            "label": "Configuration",
+            "type": "SEPARATOR"
+        },
+        {
+            "name": "api_configuration_preset",
+            "label": "API configuration preset",
+            "type": "PRESET",
+            "parameterSetId": "api-configuration",
+            "mandatory": true
+        },
+        {
+            "name": "separator_advanced",
+            "label": "Advanced",
+            "type": "SEPARATOR"
+        },
+        {
+            "name": "expert",
+            "label": "Expert mode",
+            "type": "BOOLEAN",
+            "defaultValue": false
+        }
+    ]
+}

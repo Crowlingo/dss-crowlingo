@@ -2,14 +2,15 @@
     "meta": {
         "label": "Concepts Extraction",
         "displayOrderRank": 2,
-        "description": "Extract multilingual concepts linked with a knowledge base"
+        "description": "Extract multilingual concepts linked to a knowledge base",
+        "icon": "icon-file-text"
     },
     "kind": "PYTHON",
     "selectableFromDataset": "input_dataset",
     "inputRoles": [
         {
             "name": "input_dataset",
-            "label": "Input Dataset",
+            "label": "Input dataset",
             "description": "Dataset containing the text data to analyze",
             "arity": "UNARY",
             "required": true,
@@ -34,7 +35,8 @@
         },
         {
             "name": "text_column",
-            "label": "Text column *",
+            "label": "Text column",
+            "description": "Column containing the text data to enrich.",
             "type": "COLUMN",
             "columnRole": "input_dataset",
             "mandatory": true,
@@ -44,35 +46,37 @@
         },
         {
             "name": "lang_column",
-            "label": "Language Column",
+            "label": "Language column",
+            "description": "Column containing the language of the text data to enrich.",
             "type": "COLUMN",
             "columnRole": "input_dataset",
-            "mandatory": false
+            "mandatory": false,
+            "visibilityCondition": "model.expert"
         },
         {
             "name": "precision",
             "label": "Precision",
+            "description": "Precision of the extraction. The higher the value, the more concepts you will get.",
             "type": "DOUBLE",
-            "mandatory": false
+            "defaultValue": 0.9,
+            "mandatory": false,
+            "visibilityCondition": "model.expert"
         },
         {
             "name": "split",
             "label": "Split",
+            "description": "Divide the text into several smaller texts. Relevant if you have a very long text and need all possible concepts.",
             "type": "BOOLEAN",
-            "mandatory": false
+            "mandatory": false,
+            "visibilityCondition": "model.expert"
         },
         {
             "name": "properties",
             "label": "properties",
+            "description": "Properties associated with the concept (titles, coordinates ...).",
             "type": "STRINGS",
-            "mandatory": false
-        },
-        {
-            "name": "result_prefix",
-            "label": "Result Prefix",
-            "type": "STRING",
-            "defaultValue": "",
-            "mandatory": false
+            "mandatory": false,
+            "visibilityCondition": "model.expert"
         },
         {
             "name": "separator_configuration",
@@ -81,7 +85,7 @@
         },
         {
             "name": "api_configuration_preset",
-            "label": "API configuration preset *",
+            "label": "API configuration preset",
             "type": "PRESET",
             "parameterSetId": "api-configuration",
             "mandatory": true
@@ -90,6 +94,12 @@
             "name": "separator_advanced",
             "label": "Advanced",
             "type": "SEPARATOR"
+        },
+        {
+            "name": "expert",
+            "label": "Expert mode",
+            "type": "BOOLEAN",
+            "defaultValue": false
         }
     ]
 }

@@ -2,9 +2,9 @@
     "meta": {
         "label": "Model - Clear",
         "description": "",
-        "icon": "icon-puzzle-piece"
+        "icon": "icon-trash"
     },
-   "impersonate": false,
+   "impersonate": true,
     "params": [
         {
             "name": "separator_input",
@@ -14,14 +14,9 @@
         {
             "name": "model_id",
             "label": "Model ID",
+            "description": "ID of the model to clear.",
             "type": "STRING",
             "mandatory": true
-        },
-        {
-            "name": "model_owner",
-            "label": "Model Owner",
-            "type": "STRING",
-            "mandatory": false
         },
         {
             "name": "separator_input",

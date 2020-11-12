@@ -2,9 +2,9 @@
     "meta": {
         "label": "Model - Delete",
        "description": "",
-       "icon": "icon-puzzle-piece"
+       "icon": "icon-remove"
     },
-   "impersonate": false,
+   "impersonate": true,
     "params": [
         {
             "name": "separator_input",
@@ -13,15 +13,10 @@
         },
         {
             "name": "model_id",
-            "label": "Model ID *",
+            "label": "Model ID",
+            "description": "ID of the model you want to delete.",
             "type": "STRING",
             "mandatory": true
-        },
-        {
-            "name": "model_owner",
-            "label": "Model Owner",
-            "type": "STRING",
-            "mandatory": false
         },
         {
             "name": "separator_input",
@@ -30,7 +25,7 @@
         },
         {
             "name": "api_configuration_preset",
-            "label": "API configuration preset *",
+            "label": "API configuration preset",
             "type": "PRESET",
             "parameterSetId": "api-configuration",
             "mandatory": true

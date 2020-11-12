@@ -10,8 +10,8 @@ precision = get_recipe_config().get("precision")
 
 def call_api(client, row):
     return client.concepts.extract(row.get(text_column), lang=row.get(lang_column),
-                                   precision=row.get(precision), properties=row.get(properties),
-                                   split=row.get(split)).dict()
+                                   precision=precision, properties=properties,
+                                   split=split).dict()
 
 
 apply_func(call_api)

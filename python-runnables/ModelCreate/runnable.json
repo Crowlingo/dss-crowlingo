@@ -2,9 +2,9 @@
     "meta": {
         "label": "Model - Create",
         "description": "",
-        "icon": "icon-puzzle-piece"
+        "icon": "icon-plus"
     },
-   "impersonate": false,
+   "impersonate": true,
     "params": [
 
         {
@@ -14,7 +14,8 @@
         },
         {
             "name": "category",
-            "label": "Category *",
+            "label": "Category",
+            "description": "Category of model you want to create.",
             "type": "SELECT",
             "mandatory": true,
             "selectChoices": [
@@ -30,7 +31,8 @@
         },
         {
             "name": "model_id",
-            "label": "Model ID *",
+            "label": "Model ID",
+            "description": "ID of the model to create.",
             "type": "STRING",
             "mandatory": true
         },
@@ -41,7 +43,7 @@
         },
         {
             "name": "api_configuration_preset",
-            "label": "API configuration preset *",
+            "label": "API configuration preset",
             "type": "PRESET",
             "parameterSetId": "api-configuration",
             "mandatory": true

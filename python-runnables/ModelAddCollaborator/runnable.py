@@ -30,5 +30,4 @@ class MyRunnable(Runnable):
         The progress_callback is a function expecting 1 value: current progress
         """
         client = get_client(self.config)
-        return str(client.model.add_collaborator(self.config["model_id"], self.config["email"],
-                                             model_owner=self.config.get("model_owner")))
+        return str(client.model.add_collaborator(self.config["model_id"], self.config["email"]))
