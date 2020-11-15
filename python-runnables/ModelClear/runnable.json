@@ -1,7 +1,7 @@
 {
     "meta": {
         "label": "Model - Clear",
-        "description": "",
+        "description": "Clear the training data of your model.",
         "icon": "icon-trash"
     },
    "impersonate": true,

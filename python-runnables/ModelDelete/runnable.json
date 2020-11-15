@@ -1,7 +1,7 @@
 {
     "meta": {
         "label": "Model - Delete",
-       "description": "",
+       "description": "Delete a model.",
        "icon": "icon-remove"
     },
    "impersonate": true,

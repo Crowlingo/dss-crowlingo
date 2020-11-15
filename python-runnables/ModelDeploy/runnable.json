@@ -1,7 +1,7 @@
 {
     "meta": {
         "label": "Model - Deploy",
-       "description": "",
+       "description": "Deploy a model in production.",
        "icon": "icon-ok"
     },
    "impersonate": true,

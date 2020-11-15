@@ -1,7 +1,7 @@
 {
     "meta": {
         "label": "Model - Add Collaborator",
-       "description": "",
+       "description": "Allow a collaborator to access your model.",
        "icon": "icon-plus"
     },
    "impersonate": true,
