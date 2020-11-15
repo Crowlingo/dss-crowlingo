@@ -36,7 +36,7 @@
         {
             "name": "url_column",
             "label": "URL column",
-            "description": "Column containing the URLs to analyse.",
+            "description": "Column containing the URLs to analyze.",
             "type": "COLUMN",
             "columnRole": "input_dataset",
             "mandatory": true,

@@ -36,7 +36,7 @@
         {
             "name": "text_column",
             "label": "Text column",
-            "description": "Column containing the text data to analyse.",
+            "description": "Column containing the text data to analyze.",
             "type": "COLUMN",
             "columnRole": "input_dataset",
             "mandatory": true,
@@ -47,7 +47,7 @@
         {
             "name": "lang_column",
             "label": "Language column",
-            "description": "Column containing the language of the text data to analyse.",
+            "description": "Column containing the language of the text data to analyze.",
             "type": "COLUMN",
             "columnRole": "input_dataset",
             "mandatory": false,
@@ -71,7 +71,7 @@
         {
             "name": "visualize",
             "label": "Visualize",
-            "description": "Add SVG visualisation of the result.",
+            "description": "Add SVG visualization of the result.",
             "type": "BOOLEAN",
             "mandatory": false,
             "visibilityCondition": "model.expert"
