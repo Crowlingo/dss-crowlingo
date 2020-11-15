@@ -1,7 +1,7 @@
 {
     "meta": {
         "label": "Model - Create",
-        "description": "",
+        "description": "Create a new model.",
         "icon": "icon-plus"
     },
    "impersonate": true,
