@@ -1,7 +1,7 @@
 {
     "meta": {
         "label": "FAQ - Train",
-        "displayOrderRank": 2,
+        "displayOrderRank": 13,
         "description": "Train your FAQ model",
         "icon": "icon-file-text"
     },
@@ -44,7 +44,6 @@
         }
     ],
     "params": [
-
         {
             "name": "separator_input",
             "label": "Input Parameters",

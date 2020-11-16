@@ -1,7 +1,7 @@
 {
     "meta": {
         "label": "Key Phrases Extraction",
-        "displayOrderRank": 2,
+        "displayOrderRank": 7,
         "description": "Extract the key phrases of your text",
         "icon": "icon-file-text"
     },
@@ -62,9 +62,18 @@
             "description": "Normalization to apply on the key phrases.",
             "type": "SELECT",
             "selectChoices": [
-                { "value":  null, "label":  "None"},
-                { "value": "lower", "label": "Lower"},
-                { "value": "lemma", "label": "Lemma"}
+                {
+                    "value": null,
+                    "label": "None"
+                },
+                {
+                    "value": "lower",
+                    "label": "Lower"
+                },
+                {
+                    "value": "lemma",
+                    "label": "Lemma"
+                }
             ],
             "mandatory": false,
             "visibilityCondition": "model.expert"

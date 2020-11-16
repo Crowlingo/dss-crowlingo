@@ -1,7 +1,7 @@
 {
     "meta": {
         "label": "Summary",
-        "displayOrderRank": 2,
+        "displayOrderRank": 9,
         "description": "Extract a summary from your text",
         "icon": "icon-file-text"
     },

@@ -5,7 +5,7 @@
         "label": "Crowlingo Services NLP",
         "category": "Natural Language Processing",
         "description": "Use Crowlingo APIs for  Natural Language to perform multilingual analysis such as Named Entity Recognition, Classification or Summarization",
-        "author": "Crowlingo (Jonas Bouaziz and Jeremie Zimmer)",
+        "author": "Crowlingo (Jonas BOUAZIZ, Jeremie ZIMMER)",
         "tags": [
             "NLP"
         ]

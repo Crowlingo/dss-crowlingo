@@ -1,7 +1,7 @@
 {
     "meta": {
         "label": "Extract Article",
-        "displayOrderRank": 2,
+        "displayOrderRank": 12,
         "description": "Extract every important information from a webpage (title, content, main image ...)",
         "icon": "icon-file-text"
     },

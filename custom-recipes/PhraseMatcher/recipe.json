@@ -1,8 +1,8 @@
 {
     "meta": {
         "label": "Phrase Matcher",
-        "displayOrderRank": 2,
-        "description": "Match a word or expression in your without worrying about translations or variations",
+        "displayOrderRank": 8,
+        "description": "Match a word or expression in your text without worrying about translations or variations",
         "icon": "icon-file-text"
     },
     "kind": "PYTHON",

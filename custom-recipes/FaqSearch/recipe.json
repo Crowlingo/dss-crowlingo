@@ -1,7 +1,7 @@
 {
     "meta": {
         "label": "FAQ - Search",
-        "displayOrderRank": 2,
+        "displayOrderRank": 14,
         "description": "Search for the most similar sentences",
         "icon": "icon-file-text"
     },

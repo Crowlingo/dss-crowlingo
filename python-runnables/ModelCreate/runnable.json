@@ -1,12 +1,12 @@
 {
     "meta": {
         "label": "Model - Create",
-        "description": "Create a new model.",
-        "icon": "icon-plus"
+        "description": "Create a new model",
+        "icon": "icon-plus",
+        "displayOrderRank": 1
     },
-   "impersonate": true,
+    "impersonate": true,
     "params": [
-
         {
             "name": "separator_input",
             "label": "Input Parameters",
@@ -19,9 +19,18 @@
             "type": "SELECT",
             "mandatory": true,
             "selectChoices": [
-              { "value": "clf", "label": "Classifier"},
-              { "value": "faq", "label": "FAQ"},
-              { "value": "cpt", "label": "Concepts"}
+                {
+                    "value": "clf",
+                    "label": "Classifier"
+                },
+                {
+                    "value": "faq",
+                    "label": "FAQ"
+                },
+                {
+                    "value": "cpt",
+                    "label": "Concepts"
+                }
             ]
         },
         {

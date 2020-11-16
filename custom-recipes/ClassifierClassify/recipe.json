@@ -1,7 +1,7 @@
 {
     "meta": {
         "label": "Classifier - Classify",
-        "displayOrderRank": 2,
+        "displayOrderRank": 16,
         "description": "Use your classification model on your text",
         "icon": "icon-file-text"
     },
