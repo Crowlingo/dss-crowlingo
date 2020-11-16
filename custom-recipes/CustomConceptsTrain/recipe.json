@@ -1,7 +1,7 @@
 {
     "meta": {
         "label": "Custom Concepts - Train",
-        "displayOrderRank": 2,
+        "displayOrderRank": 3,
         "description": "Train your custom concepts extraction model",
         "icon": "icon-file-text"
     },
@@ -73,7 +73,8 @@
             "name": "separator_input",
             "label": "Labels Input Parameters",
             "type": "SEPARATOR"
-        },{
+        },
+        {
             "name": "text_column",
             "label": "Text column",
             "description": "Column containing the text of the labels.",

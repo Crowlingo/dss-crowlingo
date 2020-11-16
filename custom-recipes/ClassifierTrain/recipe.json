@@ -1,7 +1,7 @@
 {
     "meta": {
         "label": "Classifier - Train",
-        "displayOrderRank": 2,
+        "displayOrderRank": 15,
         "description": "Train a classification model based on your dataset",
         "icon": "icon-file-text"
     },

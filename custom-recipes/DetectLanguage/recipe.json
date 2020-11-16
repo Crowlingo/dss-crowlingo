@@ -1,7 +1,7 @@
 {
     "meta": {
         "label": "Detect Language",
-        "displayOrderRank": 2,
+        "displayOrderRank": 1,
         "description": "Detect the language of your text",
         "icon": "icon-file-text"
     },
