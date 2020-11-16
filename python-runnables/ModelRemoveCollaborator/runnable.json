@@ -1,12 +1,12 @@
 {
     "meta": {
         "label": "Model - Remove Collaborator",
-       "description": "Remove the access a collaborator to your model.",
-       "icon": "icon-remove"
+        "description": "Remove the access a collaborator to your model",
+        "icon": "icon-remove",
+        "displayOrderRank": 5
     },
-   "impersonate": true,
+    "impersonate": true,
     "params": [
-
         {
             "name": "separator_input",
             "label": "Input Parameters",

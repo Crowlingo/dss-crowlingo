@@ -1,10 +1,11 @@
 {
     "meta": {
         "label": "Model - Deploy",
-       "description": "Deploy a model in production.",
-       "icon": "icon-ok"
+        "description": "Deploy a model in production",
+        "icon": "icon-ok",
+        "displayOrderRank": 3
     },
-   "impersonate": true,
+    "impersonate": true,
     "params": [
         {
             "name": "separator_input",

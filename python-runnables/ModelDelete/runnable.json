@@ -1,10 +1,11 @@
 {
     "meta": {
         "label": "Model - Delete",
-       "description": "Delete a model.",
-       "icon": "icon-remove"
+        "description": "Delete a model",
+        "icon": "icon-remove",
+        "displayOrderRank": 6
     },
-   "impersonate": true,
+    "impersonate": true,
     "params": [
         {
             "name": "separator_input",

@@ -1,7 +1,7 @@
 {
     "meta": {
         "label": "Duckling Entities Extraction",
-        "displayOrderRank": 2,
+        "displayOrderRank": 6,
         "description": "Extract structured numeric or temporal entities from your text",
         "icon": "icon-file-text"
     },

@@ -1,7 +1,7 @@
 {
     "meta": {
-        "label": "Texts Similarity",
-        "displayOrderRank": 2,
+        "label": "Text Similarity",
+        "displayOrderRank": 10,
         "description": "Compute the semantic similarity between two texts",
         "icon": "icon-file-text"
     },

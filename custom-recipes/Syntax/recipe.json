@@ -1,7 +1,7 @@
 {
     "meta": {
         "label": "Syntax",
-        "displayOrderRank": 2,
+        "displayOrderRank": 11,
         "description": "Extract the syntax of your text (POS Tagging, Lemmas, grammatical features ...)",
         "icon": "icon-file-text"
     },

@@ -1,10 +1,11 @@
 {
     "meta": {
         "label": "Model - Add Collaborator",
-       "description": "Allow a collaborator to access your model.",
-       "icon": "icon-plus"
+        "description": "Allow a collaborator to access your model",
+        "icon": "icon-plus",
+        "displayOrderRank": 2
     },
-   "impersonate": true,
+    "impersonate": true,
     "params": [
         {
             "name": "separator_input",

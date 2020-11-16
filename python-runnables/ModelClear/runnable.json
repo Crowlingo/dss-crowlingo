@@ -1,10 +1,11 @@
 {
     "meta": {
         "label": "Model - Clear",
-        "description": "Clear the training data of your model.",
-        "icon": "icon-trash"
+        "description": "Clear the training data of your model",
+        "icon": "icon-trash",
+        "displayOrderRank": 4
     },
-   "impersonate": true,
+    "impersonate": true,
     "params": [
         {
             "name": "separator_input",
