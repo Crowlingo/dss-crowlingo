@@ -1,1 +1,1 @@
-PyCrowlingo==0.5.0
+PyCrowlingo==0.5.1
